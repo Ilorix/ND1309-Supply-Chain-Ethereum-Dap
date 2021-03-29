@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Fair Trade Coffee</title>
+    <link href="https://fonts.googleapis.com/css?family=Roboto" rel="stylesheet">
+    <link rel="stylesheet" type="text/css" href="src/css/bootstrap.min.css">
+</head>
+
+<body>
+    <div class="card">
+        <div class="card-header">
+            Udacity Blockchain Developer
+        </div>
+        <div class="card-body">
+          <h1 class="card-title">Fair Trade Coffee</h1>
+          <p class="card-text">Prove the authenticity of coffee using the Ethereum blockchain.</p>
+        </div>
+    </div>
+    <div><br></div>
+    <div id="ftc-harvest" class="container card">
+        <h2>Product Overview</h2>
+        <div class="mb-3 card-body" row>
+            <label for="sku" class="form-label text-primary">SKU</label>
+            <input class="input-field" type="number" id="sku" name="sku" value=1><br>
+            <label for="upc" class="form-label text-primary">UPC</label>
+            <input type="number" id="upc" name="upc" value=1><br>
+            <label for="ownerID" class="form-label text-primary">Current Owner ID</label>
+            <input type="text" id="ownerID" name="ownerID" value="0xe67bB2a6a0A8F0A57589c133f2470f95874Ef43a" size="50"><br>
+            <br>
+            <div class=button-div>
+                <button class="btn btn-primary" id="button" type="button" data-id="9">Fetch Data 1</button>
+                <button class="btn btn-primary" id="button" type="button" data-id="10">Fetch Data 2</button>
+            </div>
+        </div>
+        <div></div>
+        <h2>Farm Details</h2>
+        <div class="mb-3 card-body" row>            
+            <label for="originFarmerID" class="form-label text-primary">Farmer ID</label>
+            <input type="text" id="originFarmerID" name="originFarmerID" value="0xc792F2b5B6F714D8D8656826215aa66aFD01D007" size="50"><br>
+            <label for="originFarmName" class="form-label text-primary">Farm Name</label>
+            <input type="text" id="originFarmName" name="originFarmName" value="John Doe"><br>
+            <label for="originFarmInformation" class="form-label text-primary">Farm Information</label>
+            <input type="text" id="originFarmInformation" name="originFarmInformation" value="Yarra Valley"><br>
+            <label for="originFarmLatitude" class="form-label text-primary">Farm Latitude</label>
+            <input type="text" id="originFarmLatitude" name="originFarmLatitude" value="-38.239770"><br>
+            <label for="originFarmLongitude" class="form-label text-primary">Farm Longitude</label>
+            <input type="text" id="originFarmLongitude" name="originFarmLongitude" value="144.341490"><br>
+            <br>
+            <div class=button-div>
+                <button class="btn btn-primary" id="button" type="button" data-id="1">Harvest</button>
+                <button class="btn btn-primary" id="button" type="button" data-id="2">Process</button>
+                <button class="btn btn-primary" id="button" type="button" data-id="3">Pack</button>
+                <button class="btn btn-primary" id="button" type="button" data-id="4">ForSale</button>
+            </div>
+        </div>
+        <div></div>
+        <h2>Product Details</h2>
+        <div class="mb-3 card-body" row>            
+            <label for="productNotes" class="form-label text-primary">Product Notes</label>
+            <input type="text" id="productNotes" name="productNotes" value="Best beans for Espresso" size="60"><br>
+            <label for="productPrice" class="form-label text-primary">Product Price</label>
+            <input type="number" id="productPrice" name="productPrice" value=1>&nbsp;ETH<br>
+            <label for="distributorID" class="form-label text-primary">Distributor ID</label>
+            <input type="text" id="distributorID" name="distributorID" value="0x51f42A1ED90CA6b3eea169c6c3dC61bd21E46840" size="50"><br>
+            <label for="retailerID" class="form-label text-primary">Retailer ID</label>
+            <input type="text" id="retailerID" name="retailerID" value="0xd2cBE3A2E7a617A4252Bd24AfBEee0503F86Ec0b"
+                size="50"><br>
+            <label for="consumerID" class="form-label text-primary">Consumer ID</label>
+            <input type="text" id="consumerID" name="consumerID" value="0x83690F2c1f9067d285a8954FE77b84f2054D61ef" size="50"><br>
+            <br>
+            <div class=button-div>
+                <button class="btn btn-primary" id="button" type="button" data-id="5">Buy</button>
+                <button class="btn btn-primary" id="button" type="button" data-id="6">Ship</button>
+                <button class="btn btn-primary" id="button" type="button" data-id="7">Receive</button>
+                <button class="btn btn-primary" id="button" type="button" data-id="8">Purchase</button>
+            </div>
+        </div>
+        <div></div>
+        <hr>
+    </div>
+
+    <h2>Transaction History<span id="ftc-history"></span></h2>
+    <div>
+        <ul id="ftc-events">
+            <!-- Events will appear here from app.js -->
+        </ul>
+        <br>
+        <hr>
+    </div>
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+    <script src="js/web3.min.js"></script>
+    <script src="js/truffle-contract.js"></script>
+    <script src="js/app.js"></script>
+</body>
+</html>

@@ -102,3 +102,14 @@ dist
 
 # TernJS port file
 .tern-port
+
+# VS Code
+.vscode/
+*.code-workspace
+
+# MAC
+.DS_Store
+
+# production
+build
+build_webpack
